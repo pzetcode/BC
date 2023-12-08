@@ -3,16 +3,10 @@
 /// </summary>
 pageextension 50102 CustomTest extends "Sales List"
 {
-    layout
-    {
-        // Add changes to page layout here
-    }
-
-    actions
-    {
-        // Add changes to page actions here
-    }
-
+    trigger OnOpenPage()
     var
         myInt: Integer;
+    begin
+        Message('Test extrnsion');
+    end;
 }
