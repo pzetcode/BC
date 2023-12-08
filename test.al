@@ -1,7 +1,7 @@
 /// <summary>
 /// PageExtension Custom Test (ID 50101) extends Record Customer List.
 /// </summary>
-pageextension 50102 CustomTest extends "Sales List"
+pageextension 50102 CustomTest extends "Sales Orders"
 {
     trigger OnOpenPage()
     var
