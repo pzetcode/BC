@@ -11,8 +11,26 @@ codeunit 50100 "Event Subscriber"
     local procedure C81_OnBeforeOnRun()
 
     begin
+        PostWarning();
+    end;
+
+    local procedure PostWarning()
+    begin
         IF NOT Dialog.Confirm(txtPostWarning, false) then
             Error(txtPostError);
+    end;
+
+
+    [EventSubscriber(ObjectType::Table, Database::Item, 'OnBeforeModifyEvent', '', true, true)]
+    local procedure T27_OnBeforeModifyEvent(var Rec: Record Item; var xRec: Record Item; RunTrigger: Boolean)
+    begin
+        CheckItemType(Rec);
+    end;
+
+    local procedure CheckItemType(var Rec: Record Item)
+    begin
+        IF Rec.Type = Rec.Type::"Special-Inventory" then
+            Message('SPecial inventory TEST');
     end;
 
 }

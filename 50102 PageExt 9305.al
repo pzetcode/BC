@@ -5,6 +5,6 @@ pageextension 50102 CustomTest extends "Sales Order List"
 {
     trigger OnOpenPage()
     begin
-        Message('Test extrnsion');
+        Message('Test extension');
     end;
 }
