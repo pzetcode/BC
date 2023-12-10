@@ -9,7 +9,7 @@
             "server": "https://BC22",
             "serverInstance": "BC",
             "authentication": "UserPassword",
-            "startupObjectId": 50101,
+            "startupObjectId": 50102,
             "startupObjectType": "Page",
             "breakOnError": "All",
             "launchBrowser": true,
